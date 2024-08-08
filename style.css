@@ -49,7 +49,7 @@ h1{
   color: limegreen;
 }
 .efeito{
-  font-family: monospace;
+  font-family: "Press Start 2P", system-ui;
   border-right: 4px solid;
   white-space: nowrap;
   width: 24ch;
