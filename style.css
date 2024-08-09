@@ -38,7 +38,7 @@ section{
 }
 /*SECTION 1*/
 .sec1{
-  background-image: url("imagem;fundos.jpg");
+  background-image: url("imagem/fundos.jpg");
 }
 .main1{
   display: flex;
@@ -138,7 +138,7 @@ button{
     opacity: 0;
     transorm: translateX(-100%);
   }
-  100{
+  100%{
     opacity: 1;
     transform: translateX(0%);
   }
