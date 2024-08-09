@@ -145,8 +145,8 @@ a{
 /*INICIO TAMANHO DO PORTFOLIO PARA TELAS MENORES*/
 @media screen and (max-width: 768px){
 .efeito{
-  font-family: "Press Start 2P", system-ui;
-  font-size: 10px;
+  font-family: monospace;
+  font-size: 25px;
   border-right: 4px solid;
   white-space: nowrap;
   width: 24ch;
