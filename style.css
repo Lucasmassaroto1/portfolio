@@ -96,6 +96,15 @@ h2{
   color: limegreen;
   text-align: center;
 }
+button{
+  background-color: limegreen;
+  font-weight: bold;
+  color: black;
+  padding: 10px 15px;
+  border-radius: 7px;
+  border: 2px solid;
+  cursor: pointer;
+}
 .container {
   display: flex;
   flex-wrap: wrap;
@@ -133,3 +142,37 @@ a{
   text-align: end;
 }
 /*FIM SECTION 2*/
+/*INICIO TAMANHO DO PORTFOLIO PARA TELAS MENORES*/
+@media screen and (max-width: 768px){
+.efeito{
+  font-family: "Press Start 2P", system-ui;
+  font-size: 17px;
+  border-right: 4px solid;
+  white-space: nowrap;
+  width: 24ch;
+  overflow: hidden;
+  animation: animaTexto steps(24) 2s, animaMarcador 0.5s linear infinite;
+}
+ .container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+.card{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background-color: #242824;
+  padding: 10px;
+  border-radius: 6px;
+  gap: 0.5rem;
+  height: max-content;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  animation: slideRight 0.5s ease;
+}
+}
+/*FIM TAMANHO DO PORTFOLIO PARA TELAS MENORES*/
