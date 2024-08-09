@@ -83,7 +83,7 @@ h1{
   min-height: 30vh;
 }
 .efeito2{
-  font-family: monospace;
+  font-family: "Press Start 2P", system-ui;
   border-right: 4px solid;
   white-space: nowrap;
   width: 8ch;
@@ -115,6 +115,17 @@ h2{
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
+  animation: slideRight 0.5s ease;
+}
+@keyframes slideRight{
+  0%{
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  100%{
+    opacity: 1;
+    transform: translateX(0%);
+  }
 }
 a{
   color: limegreen;
