@@ -147,7 +147,7 @@ a{
   font-size: 25px;
   border-right: 4px solid;
   white-space: wrap;
-  width: 24ch;
+  width: 20ch;
   overflow: hidden;
   animation: animaTexto steps(24) 2s, animaMarcador 0.5s linear infinite;
 }
