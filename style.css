@@ -147,11 +147,6 @@ a{
 .efeito{
   font-family: monospace;
   font-size: 25px;
-  border-right: 4px solid;
-  white-space: nowrap;
-  width: 24ch;
-  overflow: hidden;
-  animation: animaTexto steps(24) 2s, animaMarcador 0.5s linear infinite;
 }
  .container{
   display: flex;
@@ -160,19 +155,7 @@ a{
   gap: 20px;
 }
 .card{
-  position: relative;
-  display: flex;
   flex-direction: column;
-  background-color: #242824;
-  padding: 10px;
-  border-radius: 6px;
-  gap: 0.5rem;
-  height: max-content;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
-  animation: slideRight 0.5s ease;
 }
 }
 /*FIM TAMANHO DO PORTFOLIO PARA TELAS MENORES*/
