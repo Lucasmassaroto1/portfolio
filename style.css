@@ -3,10 +3,10 @@
   padding: 0;
   box-sizing: border-box;
 }
-/*INICIO PARTE GERAL*/
 body{
   background: #0c0c0c;
   font-family: Arial, Helvetica, sans-serif;
+  /*margin: 10px;*/
 }
 header{
   text-align: start;
@@ -15,7 +15,7 @@ header{
 nav ul{
   display: flex;
   justify-content: start;
-  list-style-type: none;
+  list-style-type: nome;
   padding: 0;
   text-align: center;
   margin: 10px;
@@ -36,10 +36,9 @@ section{
   background-size: cover;
   background-attachment: fixed;
 }
-/*FIM PARTE GERAL*/
-/*INICIO SECTION 1*/
+/*SECTION 1*/
 .sec1{
-  background-image: url("imagem/fundos.jpg");
+  background-image: url("imagem;fundos.jpg");
 }
 .main1{
   display: flex;
@@ -49,28 +48,35 @@ section{
 }
 h1{
   color: limegreen;
+  font-size: 35px;
 }
 .efeito{
-  font-family: "Press Start 2P", system-ui;
-  font-size: 25px;
   border-right: 4px solid;
   white-space: nowrap;
-  width: 24ch;
+  width: 22ch;
   overflow: hidden;
-  animation: animaTexto steps(24) 2s, animaMarcador 0.5s linear infinite;
-}
-@keyframes animaMarcador{
-  50%{
-    border-right: transparent;
-  }
+  animation: animaTexto steps(22) 2s, animaMarcador 0.5s linear infinite;
 }
 @keyframes animaTexto{
   0%{
     width: 0;
   }
 }
-/*FIM SECTION 1*/
-/*INICIO SECTION 2*/
+@keyframes animaMarcador{
+  50%{
+    border-right: transparent;
+  }
+}
+@media screen and (max-width: 768px){
+.efeito{
+  border-right: 4px solid;
+  white-space: wrap;
+  width: 22ch;
+  overflow: hidden;
+  animation: animaTexto steps(22) 2s, animaMarcador 0.5s linear infinite;
+}
+}
+/*SECTION 2*/
 .sec2{
   background-image: url("imagem/fundos.jpg");
 }
@@ -81,13 +87,13 @@ h1{
   min-height: 30vh;
 }
 .efeito2{
-  font-family: "Press Start 2P", system-ui;
+  font-family: monospace;
   border-right: 4px solid;
   white-space: nowrap;
   width: 8ch;
   overflow: hidden;
 }
-.efeito2.animate{
+.efeitos2,.animate{
   animation: animaTexto steps(8) 2s, animaMarcador 0.5s linear infinite;
 }
 h2{
@@ -97,13 +103,15 @@ h2{
 button{
   background-color: limegreen;
   font-weight: bold;
+  font-size: 15px;
   color: black;
   padding: 10px 15px;
-  border-radius: 7px;
+  border-radius: 100px;
   border: 2px solid;
+  margin: 10px auto 0;
   cursor: pointer;
 }
-.container {
+.container{
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -115,21 +123,22 @@ button{
   flex-direction: column;
   background-color: #242824;
   padding: 10px;
-  border-radius: 6px;
+  borde-radius: 6px;
   gap: 0.5rem;
   height: max-content;
-  background-position: center;
+  /*background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
+  animation: slideRight 0.5s ease;*/
   animation: slideRight 0.5s ease;
 }
 @keyframes slideRight{
   0%{
     opacity: 0;
-    transform: translateX(-100%);
+    transorm: translateX(-100%);
   }
-  100%{
+  100{
     opacity: 1;
     transform: translateX(0%);
   }
@@ -139,26 +148,14 @@ a{
   text-decoration: none;
   text-align: end;
 }
-/*FIM SECTION 2*/
-/*INICIO TAMANHO DO PORTFOLIO PARA TELAS MENORES*/
 @media screen and (max-width: 768px){
-.efeito{
-  font-family: "Press Start 2P", system-ui;
-  font-size: 25px;
-  border-right: 4px solid;
-  white-space: wrap;
-  width: 20ch;
-  overflow: hidden;
-  animation: animaTexto steps(24) 2s, animaMarcador 0.5s linear infinite;
+  .container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  .card{
+    flex-direction: column;
+  }
 }
- .container{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-}
-.card{
-  flex-direction: column;
-}
-}
-/*FIM TAMANHO DO PORTFOLIO PARA TELAS MENORES*/
