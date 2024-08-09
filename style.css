@@ -48,7 +48,7 @@ section{
 }
 h1{
   color: limegreen;
-  font-size: 25px;
+  font-size: 35px;
 }
 .efeito{
   border-right: 4px solid;
@@ -69,11 +69,12 @@ h1{
 }
 @media screen and (max-width: 768px){
 .efeito{
+  font-size: 25px;
   border-right: 4px solid;
   white-space: wrap;
-  width: 22ch;
+  width: 23ch;
   overflow: hidden;
-  animation: animaTexto steps(22) 2s, animaMarcador 0.5s linear infinite;
+  animation: animaTexto steps(23) 2s, animaMarcador 0.5s linear infinite;
 }
 }
 /*SECTION 2*/
@@ -123,7 +124,7 @@ button{
   flex-direction: column;
   background-color: #242824;
   padding: 10px;
-  borde-radius: 6px;
+  border-radius: 6px;
   gap: 0.5rem;
   height: max-content;
   /*background-position: center;
