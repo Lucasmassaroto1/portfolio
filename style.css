@@ -68,19 +68,13 @@ h1{
   }
 }
 @media screen and (max-width: 768px){
-.main1{
-  min-height: 60vh;
-  padding: 20px;
-}
-h1{
- font-size: 28px;
-}
 .efeito{
+  font-size: 25px;
   border-right: 4px solid;
-  white-space: nowrap;
-  width: 22ch;
+  white-space: wrap;
+  width: 23ch;
   overflow: hidden;
-  animation: animaTexto steps(22) 2s, animaMarcador 0.5s linear infinite;
+  animation: animaTexto steps(23) 2s, animaMarcador 0.5s linear infinite;
 }
 }
 /*SECTION 2*/
@@ -130,7 +124,7 @@ button{
   flex-direction: column;
   background-color: #242824;
   padding: 10px;
-  borde-radius: 6px;
+  border-radius: 6px;
   gap: 0.5rem;
   height: max-content;
   /*background-position: center;
@@ -166,66 +160,3 @@ a{
     flex-direction: column;
   }
 }
-/*AQUI TA RESPONSIVEL?
-@media screen and (max-width: 768px) {
-  header {
-    position: relative;
-    text-align: center;
-  }
-
-  nav ul {
-    flex-direction: column;
-    justify-content: center;
-  }
-
-  nav ul li {
-    margin: 5px 0;
-  }
-
-  .main1, .main2 {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  h1 {
-    font-size: 25px;
-  }
-
-  .efeito {
-    font-size: 25px;
-    width: 100%;
-    white-space: normal;
-  }
-
-  .efeito2 {
-    font-size: 20px;
-    width: 100%;
-    white-space: normal;
-  }
-
-  .container {
-    flex-direction: column;
-    padding: 10px;
-  }
-
-  .card {
-    width: 100%;
-    margin-bottom: 20px;
-  }
-}
-@media screen and (min-width: 769px) {
-  nav ul {
-    justify-content: flex-start;
-  }
-
-  .container {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-  }
-
-  .card {
-    flex-basis: 45%;
-  }
-}*/
