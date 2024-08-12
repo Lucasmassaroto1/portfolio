@@ -66,84 +66,89 @@ h1{
 }
 /*SECTION 2*/
 .sec2{
-  background-image: url("imagem/fundos.jpg");
+    background-image: url("imagem/fundos.jpg");
 }
 .main2{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 30vh;
 }
 .efeito2{
-  font-family: monospace;
-  border-right: 4px solid;
-  white-space: nowrap;
-  width: 8ch;
-  overflow: hidden;
+    border-right: 4px solid;
+    white-space: nowrap;
+    width: 13ch;
+    overflow: hidden;
 }
-.efeitos2,.animate{
-  animation: animaTexto steps(8) 2s, animaMarcador 0.5s linear infinite;
+.efeito2.animate{
+    animation: animaTexto steps(13) 2s, animaMarcador 0.5s linear infinite;
 }
 h2{
-  color: limegreen;
-  text-align: center;
-}
-button{
-  background-color: limegreen;
-  font-weight: bold;
-  font-size: 15px;
-  color: black;
-  padding: 10px 15px;
-  border-radius: 100px;
-  border: 2px solid;
-  margin: 10px auto 0;
-  cursor: pointer;
+    color: limegreen;
+    font-size: 25px;
+    text-align: center;
 }
 .container{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-}
-.card{
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  background-color: #242824;
-  padding: 10px;
-  border-radius: 6px;
-  gap: 0.5rem;
-  height: max-content;
-  /*background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
-  animation: slideRight 0.5s ease;*/
-  animation: slideRight 0.5s ease;
-}
-@keyframes slideRight{
-  0%{
-    opacity: 0;
-    transorm: translateX(-100%);
-  }
-  100%{
-    opacity: 1;
-    transform: translateX(0%);
-  }
-}
-a{
-  color: limegreen;
-  text-decoration: none;
-  text-align: end;
-}
-@media screen and (max-width: 768px){
-  .container{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
-  }
-  .card{
+}
+.card{
+    position: relative;
+    display: flex;
     flex-direction: column;
-  }
+    background: #242824;
+    padding: 10px;
+    border-radius: 6px;
+    gap: 0.5rem;
+    height: max-content;
+}
+.card.animate{
+    animation: slideRight 0.5s ease;
+}
+a{
+    color: limegreen;
+    text-decoration: none;
+    text-align: end;
+}
+@keyframes slideRight{
+    0%{
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0%);
+    }
+}
+@media screen and (max-width: 768px){
+    .main2{
+        display: flex;
+        align-items: center;
+        text-align: center;
+        min-height: 30vh;
+    }
+    h1,h2{
+        font-size: 25px;
+        text-align: center;
+    }
+    .efeito2{
+        border-right: 4px solid;
+        white-space: nowrap;
+        width: 13ch;
+        overflow: hidden;
+    }
+    .efeito2.animate{
+        animation: animaTexto steps(13) 2s, animaMarcador 0.5s linear infinite;
+    }
+    .container{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+    .card{
+        flex-direction: column;
+    }
 }
