@@ -68,13 +68,17 @@ h1{
   }
 }
 @media screen and (max-width: 768px){
+.main1{
+  min-height: 60vh;
+  padding: 20px;
+}
+h1{
+ font-size: 28px;
+}
 .efeito{
-  font-size: 25px;
-  border-right: 4px solid;
-  white-space: wrap;
-  width: 23ch;
-  overflow: hidden;
-  animation: animaTexto steps(23) 2s, animaMarcador 0.5s linear infinite;
+  white-space: normal;
+  width: auto;
+  animation: animaTexto steps(22) 2s, animaMarcador 0.5s linear infinite;
 }
 }
 /*SECTION 2*/
