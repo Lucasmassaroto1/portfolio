@@ -77,7 +77,7 @@ h1{
 }
 .efeito{
   white-space: normal;
-  width: auto;
+  width: 22ch;
   animation: animaTexto steps(22) 2s, animaMarcador 0.5s linear infinite;
 }
 }
