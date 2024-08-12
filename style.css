@@ -1,81 +1,68 @@
 *{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 body{
-  background: #0c0c0c;
-  font-family: Arial, Helvetica, sans-serif;
-  /*margin: 10px;*/
-}
-header{
-  text-align: start;
-  position: fixed;
-}
-nav ul{
-  display: flex;
-  justify-content: start;
-  list-style-type: nome;
-  padding: 0;
-  text-align: center;
-  margin: 10px;
-}
-nav ul li{
-  display: inline;
-  margin-right: 10px;
-}
-nav ul li a{
-  color: white;
-  text-decoration: limegreen underline 3px;
+    background: #0c0c0c;
+    font-family: Arial, Helvetica, sans-serif;
 }
 section{
-  width: 100%;
-  height: 100vh;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
+    width: 100%;
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
 }
 /*SECTION 1*/
 .sec1{
-  background-image: url("imagem/fundos.jpg");
+    background-image: url("imagem/fundos.jpg");
 }
 .main1{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
 }
 h1{
-  color: limegreen;
-  font-size: 35px;
+    color: limegreen;
+    font-size: 35px;
 }
 .efeito{
-  border-right: 4px solid;
-  white-space: nowrap;
-  width: 22ch;
-  overflow: hidden;
-  animation: animaTexto steps(22) 2s, animaMarcador 0.5s linear infinite;
+    border-right: 4px solid;
+    white-space: nowrap;
+    width: 22ch;
+    overflow: hidden;
+    animation: animaTexto steps(22) 2s, animaMarcador 0.5s linear infinite;
 }
 @keyframes animaTexto{
-  0%{
-    width: 0;
-  }
+    0%{
+        width: 0;
+    }
 }
 @keyframes animaMarcador{
-  50%{
-    border-right: transparent;
-  }
+    50%{
+        border-right: transparent;
+    }
 }
 @media screen and (max-width: 768px){
-.efeito{
-  font-size: 25px;
-  border-right: 4px solid;
-  white-space: wrap;
-  width: 23ch;
-  overflow: hidden;
-  animation: animaTexto steps(23) 2s, animaMarcador 0.5s linear infinite;
-}
+    .main1{
+        display: flex;
+        align-items: center;
+        text-align: center;
+        min-height: 80vh;
+    }
+    h1{
+        font-size: 25px;
+    }
+    .efeito{
+        border-right: 4px solid;
+        white-space: nowrap;
+        width: 22ch;
+        overflow: hidden;
+        animation: animaTexto steps(22) 2s, animaMarcador 0.5s linear infinite;
+    }
 }
 /*SECTION 2*/
 .sec2{
