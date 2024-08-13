@@ -1,154 +1,186 @@
 *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  boz-sizing: border-box;
 }
 body{
-    background: #0c0c0c;
-    font-family: Arial, Helvetica, sans-serif;
+  background: #0c0c0c;
+  font-family: Arial, Helvetica, sans-serif;
 }
 section{
-    width: 100%;
-    height: 100dvh;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
+  width: 100%;
+  height: 100dvh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
 }
 /*SECTION 1*/
 .sec1{
-    background-image: url("imagem/fundos.jpg");
+  background-image: url("imagem/fundos.jpg");
 }
 .main1{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80dvh;
 }
 h1{
-    color: limegreen;
-    font-size: 35px;
+  color: limegreen;
+  font-size: 35px;
 }
 .efeito{
-    border-right: 4px solid;
-    white-space: nowrap;
-    width: 22ch;
-    overflow: hidden;
-    animation: animaTexto steps(22) 2s, animaMarcador 0.5s linear infinite;
+  font-family: monospace;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 23ch;
+  position: relative;
+  animation: animaTexto steps(23) 2s;
+}
+.efeito::after{
+  content: "_";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  animation: animaCursor 0.5s step-end infinite;
 }
 @keyframes animaTexto{
-    0%{
-        width: 0;
-    }
+  0%{
+    width: 0;
+  }
 }
-@keyframes animaMarcador{
-    50%{
-        border-right: transparent;
-    }
+@keyframes animaCursor{
+  50%{
+    opacity: 0;
+  }
 }
 @media screen and (max-width: 768px){
-    .main1{
-        display: flex;
-        align-items: center;
-        text-align: center;
-        min-height: 80vh;
-    }
-    h1{
-        font-size: 25px;
-    }
-    .efeito{
-        border-right: 4px solid;
-        white-space: nowrap;
-        width: 22ch;
-        overflow: hidden;
-        animation: animaTexto steps(22) 2s, animaMarcador 0.5s linear infinite;
-    }
+  .main1{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    min-height: 80dvh;
+  }
+  h1{
+    font-size: 25px;
+  }
+  .efeito{
+    font-family: monospace;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 23ch;
+    position: relative;
+    animation: animaTexto staps(23) 2s;
+  }
+  .efeito::after{
+    content: "_";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    animation: animaCursor 0.5s step-end infinite;
+  }
 }
 /*SECTION 2*/
 .sec2{
-    background-image: url("imagem/fundos.jpg");
+  background-image: url("imagem/fundos.jpg");
 }
 .main2{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 30vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 30dvh;
 }
 .efeito2{
-    border-right: 4px solid;
-    white-space: nowrap;
-    width: 13ch;
-    overflow: hidden;
+  font-family: monospace;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 14ch;
+  position: relative;
+}
+.efeito2::after{
+  content: "_";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  animation: animaCursor 0.5s step-end infinite;
 }
 .efeito2.animate{
-    animation: animaTexto steps(13) 2s, animaMarcador 0.5s linear infinite;
+  animation: animaTexto steps(14) 2s;
 }
 h2{
-    color: limegreen;
-    font-size: 25px;
-    text-align: center;
+  color: limegreen;
+  font-size: 25px;
+  text-align: center;
 }
 .container{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
 }
 .card{
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    background: #242824;
-    padding: 10px;
-    border-radius: 6px;
-    gap: 0.5rem;
-    height: max-content;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background: #242824;
+  padding: 10px;
+  border-radius: 6px;
+  gap: 0.5rem;
+  height: max-content;
 }
 .card.animate{
-    animation: slideRight 0.5s ease;
+  animation: slideRight 0.5s ease;
 }
 a{
-    color: limegreen;
-    text-decoration: none;
-    text-align: end;
+  color: limegreen;
+  text-decoration: none;
+  text-align: end;
 }
 @keyframes slideRight{
-    0%{
-        opacity: 0;
-        transform: translateX(-100%);
-    }
-    100%{
-        opacity: 1;
-        transform: translateX(0%);
-    }
+  0%{
+    opacity: 0;
+    transform: translatex(-100%);
+  }
+  100%{
+    opacity: 1;
+    transform: translatex(0%);
+  }
 }
 @media screen and (max-width: 768px){
-    .main2{
-        display: flex;
-        align-items: center;
-        text-align: center;
-        min-height: 30vh;
-    }
-    h1,h2{
-        font-size: 25px;
-        text-align: center;
-    }
-    .efeito2{
-        border-right: 4px solid;
-        white-space: nowrap;
-        width: 13ch;
-        overflow: hidden;
-    }
-    .efeito2.animate{
-        animation: animaTexto steps(13) 2s, animaMarcador 0.5s linear infinite;
-    }
-    .container{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 20px;
-    }
-    .card{
-        flex-direction: column;
-    }
+  .main2{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    min-height: 30dvh;
+  }
+  h1,h2{
+    font-size: 25px;
+    text-align: center;
+  }
+  .efeito2{
+    font-family: monospace;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 14ch;
+    position: relative;
+  }
+  .efeito2::after{
+    content: "_";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    animation: animaCursor 0.5s step-end infinite;
+  }
+  .efeito2.animate{
+    aniamte: animaTexto steps(14) 2s;
+  }
+  .container{
+    display: flex;
+    flex-wrap: wrap;
+    justfy-content: center;
+    gap: 20px;
+  }
+  .card{
+    flex-direction: column;
+  }
 }
