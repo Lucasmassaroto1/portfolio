@@ -68,9 +68,9 @@ h1{
     font-family: monospace;
     white-space: nowrap;
     overflow: hidden;
-    width: 24ch;
+    width: 25ch;
     position: relative;
-    animation: animaTexto staps(24) 2s;
+    animation: animaTexto staps(25) 2s;
   }
   .efeito::after{
     content: "_";
@@ -161,7 +161,7 @@ a{
     font-family: monospace;
     white-space: nowrap;
     overflow: hidden;
-    width: 15ch;
+    width: 16ch;
     position: relative;
   }
   .efeito2::after{
@@ -172,7 +172,7 @@ a{
     animation: animaCursor 0.5s step-end infinite;
   }
   .efeito2.animate{
-    aniamte: animaTexto steps(15) 2s;
+    aniamte: animaTexto steps(16) 2s;
   }
   .container{
     display: flex;
