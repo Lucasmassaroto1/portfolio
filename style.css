@@ -68,9 +68,9 @@ h1{
     font-family: monospace;
     white-space: nowrap;
     overflow: hidden;
-    width: 25ch;
+    width: 24ch;
     position: relative;
-    animation: animaTexto staps(25) 2s;
+    animation: animaTexto staps(24) 2s;
   }
   .efeito::after{
     content: "_";
