@@ -107,11 +107,6 @@ h1{
 .efeito2.animate{
   animation: animaTexto steps(14) 2s;
 }
-h2{
-  color: limegreen;
-  font-size: 25px;
-  text-align: center;
-}
 .container{
   display: flex;
   flex-wrap: wrap;
@@ -153,7 +148,7 @@ a{
     text-align: center;
     min-height: 30dvh;
   }
-  h1,h2{
+  h1{
     font-size: 25px;
     text-align: center;
   }
