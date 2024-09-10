@@ -5,8 +5,8 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 body{
-  background: #0c0c0c;
-  height: 100vh;
+  background: black;
+  height: 100dvh;
 }
 .interface{
   max-width: 1280px;
