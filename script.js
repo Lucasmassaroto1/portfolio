@@ -19,16 +19,20 @@ document.getElementById('filter-projects').addEventListener('change', function()
   const selectedValue = this.value;
   const projects = document.querySelectorAll('.img-port');
 
-  projects.forEach(project =>{
-    if(selectedValue === 'all'){
+  projects.forEach(project => {
+    if (selectedValue === 'fill') {
+      project.style.display = 'none';
+    } else if (selectedValue === 'all') {
       project.style.display = 'block';
-    }else if(project.classList.contains(selectedValue)){
+    } else if (project.classList.contains(selectedValue)) {
       project.style.display = 'block';
-    }else{
+    } else {
       project.style.display = 'none';
     }
   });
 });
+// REMOVE OS CARDS
+document.getElementById('filter-projects').dispatchEvent(new Event('change'));
 // TENTANDO CRIAR ANIMAÇÕES
 // ROLAGEM SUAVE
 const links = document.querySelectorAll("nav ul li a");
