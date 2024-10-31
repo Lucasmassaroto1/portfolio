@@ -1,3 +1,4 @@
+/*GERAL*/
 *{
   margin: 0;
   padding: 0;
@@ -211,7 +212,7 @@ section.sobre .flex{
   text-decoration: none;
 }
 /*ESTILO DOS PROJETOS*/
-/* QUANDO EU ESCREVI ISSO SÓ EU E DEUS SABIA O QUE EU ESTAVA FAZENDO, AGORA SÓ DEUS SABE */
+/* O QUE EU ESTAVA FAZENDO? */
 section.projetos{
   padding: 80px 4%;
 }
@@ -298,7 +299,7 @@ footer .line-footer p a{
   text-decoration: none;
 }
 /*SITE RESPONSIVEL*/
-@media screen and (max-width: 768px) and (max-width: 991px){ /* SE MUDAR VAI DAR MERDA */
+@media screen and (max-width: 768px) and (max-width: 991px){ /* SE MUDAR DA MERDA */
 /*CLASSE GERAIS*/
   .flex{
     flex-direction: column;
