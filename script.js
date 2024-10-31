@@ -14,23 +14,6 @@ menu.addEventListener("click", () => {
 overlay.addEventListener("click", () => {
   menu.classList.remove("abrir-menu");
 });
-// ROLAGEM SUAVE
-const links = document.querySelectorAll("nav ul li a");
-
-for (const link of links) {
-  link.addEventListener("click", smoothScroll);
-}
-
-function smoothScroll(event) {
-  event.preventDefault();
-  const targetId = event.currentTarget.getAttribute("href").substring(1);
-  const targetSection = document.getElementById(targetId);
-
-  window.scrollTo({
-    top: targetSection.offsetTop,
-    behavior: "smooth"
-  });
-}
 // SELETOR DE PROJETOS
 document.getElementById('filter-projects').addEventListener('change', function(){
   const selectedValue = this.value;
@@ -45,4 +28,51 @@ document.getElementById('filter-projects').addEventListener('change', function()
       project.style.display = 'none';
     }
   });
+});
+// TENTANDO CRIAR ANIMAÇÕES
+// ROLAGEM SUAVE
+const links = document.querySelectorAll("nav ul li a");
+
+for (const link of links){
+  link.addEventListener("click", smoothScroll);
+}
+
+function smoothScroll(event){
+  event.preventDefault();
+  const targetId = event.currentTarget.getAttribute("href").substring(1);
+  const targetSection = document.getElementById(targetId);
+
+  window.scrollTo({
+    top: targetSection.offsetTop,
+    behavior: "smooth"
+  });
+}
+// ESTILO DA ANIMAÇÃO NO MOUSE
+function createClickAnimation(x, y){
+  const circle = document.createElement('div');
+  circle.style.position = 'fixed';
+  circle.style.border = '3px solid rgba(255, 255, 255, 0.8)';
+  circle.style.borderRadius = '50%';
+  circle.style.width = '30px';
+  circle.style.height = '30px';
+  circle.style.left = `${x - 15}px`;
+  circle.style.top = `${y - 15}px`;
+  circle.style.pointerEvents = 'none';
+  circle.style.opacity = '1';
+  circle.style.transform = 'scale(0)';
+  circle.style.transition = 'transform 0.6s ease-out, opacity 0.6s ease-out';
+  document.body.appendChild(circle);
+
+  setTimeout(() =>{
+    circle.style.transform = 'scale(3)';
+    circle.style.opacity = '0';
+  }, 10);
+
+  setTimeout(() =>{
+    circle.remove();
+  }, 600);
+}
+// ADICIONA A ANIMAÇÃO NO PONTEIRO
+document.addEventListener('click', () =>{
+  createClickAnimation(event.clientX, event.clientY);
 });
