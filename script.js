@@ -74,5 +74,8 @@ function createClickAnimation(x, y){
 }
 // ADICIONA A ANIMAÇÃO NO PONTEIRO
 document.addEventListener('click', () =>{
-  createClickAnimation(event.clientX, event.clientY);
+  const target = event.target;
+  if (target.tagName === 'A' || target.tagName === 'I' || target.tagName === 'SELECT'){
+    createClickAnimation(event.clientX, event.clientY);
+  }
 });
