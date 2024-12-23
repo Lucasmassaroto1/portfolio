@@ -1,17 +1,17 @@
 /*GERAL*/
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap');
 *{
   margin: 0;
   padding: 0;
   user-select: none;
   box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Exo 2", sans-serif;
 }
 body{
   background: black;
   height: 100dvh;
 }
 .interface{
-  max-width: 1280px;
   margin: 0 auto;
 }
 .flex{
@@ -40,9 +40,17 @@ h2.titulo{
 h2.titulo span{
   color: #00FF08;
 }
+/* ALINHAMENTO DAS SECTIONS */
+section{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+}
 /* ESTILO DO CABEÇALHO */
 header{
-  padding: 40px 4%;
+  padding: 30px 4%;
 }
 header > .interface{
   display: flex;
@@ -215,6 +223,7 @@ section.sobre .flex{
 /* O QUE EU ESTAVA FAZENDO? */
 section.projetos{
   padding: 80px 4%;
+  height: auto;
 }
 section.projetos .flex{
   flex-wrap: wrap;
@@ -337,6 +346,7 @@ footer .line-footer p a{
 /*ESTILO DAS LINGUAGENS*/
    section.linguagens{
     padding: 40px 8%;
+    height: auto;
   }
   section.linguagens .flex{
     align-items: center;
