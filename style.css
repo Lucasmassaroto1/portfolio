@@ -399,3 +399,15 @@ footer .line-footer p a{
     text-align: center;
   }
 }
+/* ANIMAÇÕES */
+@keyframes zoomIn{
+  from{
+    transform: scale(0.1);
+  }
+  to{
+    transform: scale(1);
+  }
+}
+.img-port.zoom-in{
+  animation: zoomIn 0.5s ease-in-out forwards;
+}
