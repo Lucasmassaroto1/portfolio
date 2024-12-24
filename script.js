@@ -83,3 +83,31 @@ document.addEventListener('click', () =>{
     createClickAnimation(event.clientX, event.clientY);
   }
 });
+//ANIMAÇÃO PROJETOS
+document.addEventListener("DOMContentLoaded", () => {
+  const selectElement = document.getElementById("filter-projects");
+  const projectCards = document.querySelectorAll(".img-port");
+
+  // Função para remover classes de zoom ativo
+  function removeZoomEffect() {
+    projectCards.forEach(card => {
+      card.classList.remove("zoom-in");
+    });
+  }
+
+  // Adiciona o evento ao select
+  selectElement.addEventListener("change", () => {
+    const selectedValue = selectElement.value;
+
+    removeZoomEffect();
+
+    projectCards.forEach(card => {
+      if (
+        selectedValue === "all" || 
+        card.classList.contains(selectedValue)
+      ) {
+        card.classList.add("zoom-in");
+      }
+    });
+  });
+});
